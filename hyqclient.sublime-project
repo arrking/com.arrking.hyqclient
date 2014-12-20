@@ -1,0 +1,33 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "folder_exclude_patterns": 
+            [
+                "node_modules","logs",
+                "www-build",
+                ".tmp",
+                ".sass-cache"
+            ],
+            "file_exclude_patterns": 
+            [
+                ".gitignore",
+                "hyqclient.sublime-project",
+                "cfignore",
+                "jshintrc",
+                "hyqclient.sublime-workspace",
+                "*.swp",
+                ".bowerrc",
+                ".editorconfig",
+                ".jshintignore"
+            ]
+        },
+    ],
+    "settings":
+    {
+        "tab_size": 4
+    },
+    "build_systems":
+    []
+}
