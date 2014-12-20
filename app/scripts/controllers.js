@@ -4,8 +4,23 @@ angular.module('Hyqclient.controllers', [])
 .controller('DashCtrl', function($scope) {
 })
 
-.controller('ContactsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('ContactsCtrl', function($scope) {
+
+	$scope.contacts = [];
+
+	for(var idx = 0; idx < 50; idx++) {
+		$scope.contacts.push({
+			'name': {
+				'firstname': '名',
+				'lastname': '姓'
+			},
+			'id': idx,
+			'phone': '1380000000',
+			'city': '北京市',
+			'company': '中华美食家协会'
+		});
+	}
+
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {

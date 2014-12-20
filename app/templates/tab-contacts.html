@@ -1,9 +1,18 @@
-<ion-view title="contacts">
+<ion-view title="通讯录">
   <ion-content class="has-header">
-    <ion-list>
-      <ion-item class="item-icon-right" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        {{friend.name}}
-        <i class="icon ion-chevron-right icon-accessory"></i>
+    <ion-list class="list-contacts">
+      <ion-item class="item-thumbnail-left" ng-repeat="contact in contacts" type="item-text-wrap">
+      	<img src="http://p2.zhms.cn/2014-12/201412191544458676.jpg">
+      	<div class="row">
+      		<div class="col col-67">
+		        <h2>{{contact.name.lastname}} {{contact.name.firstname}}</h2>
+    			<h2 class="mb0 positive"><i class="icon ion-ios7-telephone"></i>{{contact.phone}}</h2>
+    			<p>{{contact.company}}</p>
+      		</div>
+      		<div class="col col-33">
+      			<p><i class="icon ion-ios7-location royal mr3"></i>{{contact.city}}</p>
+      		</div>
+      	</div>
       </ion-item>
     </ion-list>
   </ion-content>
