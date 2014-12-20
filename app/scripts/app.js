@@ -49,12 +49,12 @@ angular.module('Hyqclient', ['ionic', 'config', 'Hyqclient.controllers', 'Hyqcli
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
+    .state('tab.contacts', {
+      url: '/contacts',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+        'tab-contacts': {
+          templateUrl: 'templates/tab-contacts.html',
+          controller: 'ContactsCtrl'
         }
       }
     })
@@ -68,12 +68,22 @@ angular.module('Hyqclient', ['ionic', 'config', 'Hyqclient.controllers', 'Hyqcli
       }
     })
 
-    .state('tab.account', {
-      url: '/account',
+    .state('tab.jobs', {
+      url: '/jobs',
       views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+        'tab-jobs': {
+          templateUrl: 'templates/tab-jobs.html',
+          controller: 'JobsCtrl'
+        }
+      }
+    })
+
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-settings': {
+          templateUrl: 'templates/tab-settings.html',
+          controller: 'SettingsCtrl'
         }
       }
     });

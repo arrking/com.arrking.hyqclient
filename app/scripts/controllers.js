@@ -4,7 +4,7 @@ angular.module('Hyqclient.controllers', [])
 .controller('DashCtrl', function($scope) {
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('ContactsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
 })
 
@@ -12,5 +12,8 @@ angular.module('Hyqclient.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('JobsCtrl', function($scope) {
+})
+
+.controller('SettingsCtrl', function($scope) {
 });
