@@ -22,7 +22,8 @@ var projName = projConfig.name();
 var fileset = {
     android: {
         "AndroidManifest.xml": "AndroidManifest.xml",
-        "Hyqclient.java": "src/com/arrking/hyqclient/Hyqclient.java"
+        "Hyqclient.java": "src/com/arrking/hyqclient/Hyqclient.java",
+        "ant.properties": "ant.properties"
     }
 };
 
