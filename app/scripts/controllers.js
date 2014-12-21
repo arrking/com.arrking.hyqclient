@@ -2,17 +2,20 @@
 angular.module('Hyqclient.controllers', [])
 
 .controller('DashCtrl', function($scope) {
+
+	$scope.handleSlideClicked = function(index) {
+	};
 })
 
 .controller('ContactsCtrl', function($scope) {
 
 	$scope.contacts = [];
 
-	for(var idx = 0; idx < 50; idx++) {
+	for (var idx = 0; idx < 5; idx++) {
 		$scope.contacts.push({
 			'name': {
-				'firstname': '名',
-				'lastname': '姓'
+				'firstname': '锋',
+				'lastname': '雷'
 			},
 			'id': idx,
 			'phone': '1380000000',
