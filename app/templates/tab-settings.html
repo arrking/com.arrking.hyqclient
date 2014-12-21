@@ -1,5 +1,34 @@
-<ion-view title="Settings">
-  <ion-content class="has-header padding">
-    <h1>Account</h1>
-  </ion-content>
+<ion-view title="我的页面">
+<ion-content class="has-header padding padding-top stable-bg">
+<div id="profile-bg"></div>
+<div id="content">
+	<div id="profile-info">
+	<img id="profile-image" src="images/dummy-me.png">
+		<button class="button button-clear button-balanced icon ion-ios7-camera-outline" ng-click=""></button>
+		<h3 id="profile-name">张三</h3>
+	</div>
+	<ion-list>
+	<ion-item class="item-icon-right assertive">
+	邮箱
+	<span class="item-note">zhangs@arrking.com</span>
+	<i class="icon ion-ios7-email-outline"></i>
+</ion-item>
+<ion-item class="item-icon-right">
+职位
+<span class="item-note">总经理</span>
+<i class="icon ion-ios7-arrow-right dark"></i>
+</ion-item>
+<ion-item class="item-icon-right">
+公司
+<span class="item-note">美食总动员</span>
+<i class="icon ion-ios7-arrow-right dark"></i>
+</ion-item>
+<ion-item class="item-icon-right">
+技能
+<span class="item-note">营销，研发新产品</span>
+<i class="icon ion-ios7-arrow-right dark"></i>
+</ion-item>
+</ion-list>
+</div>
+</ion-content>
 </ion-view>
