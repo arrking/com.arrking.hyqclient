@@ -10,6 +10,7 @@ angular.module('Hyqclient.controllers', [])
 .controller('ContactsCtrl', function($scope) {
 
 	$scope.contacts = [];
+	$scope.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 	for (var idx = 0; idx < 5; idx++) {
 		$scope.contacts.push({
