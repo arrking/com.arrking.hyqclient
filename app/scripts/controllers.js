@@ -11,8 +11,8 @@ angular.module('Hyqclient.controllers', [])
 	for(var idx = 0; idx < 50; idx++) {
 		$scope.contacts.push({
 			'name': {
-				'firstname': '名',
-				'lastname': '姓'
+				'firstname': '锋',
+				'lastname': '雷'
 			},
 			'id': idx,
 			'phone': '1380000000',
