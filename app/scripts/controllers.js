@@ -23,12 +23,27 @@ angular.module('Hyqclient.controllers', [])
 
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
+.controller('FriendDetailCtrl', function ($scope, $stateParams, Friends) {
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('JobsCtrl', function($scope) {
+.controller('JobsCtrl', function ($scope) {
+	$scope.positions = [];
+
+	for(var idx = 0; idx < 20; idx++) {
+		$scope.positions.push({
+			'id': idx,
+			'title': '招聘厨师，五险一金，供吃住',
+			'company': '海底捞餐饮文化有限公司',
+			'city': '北京',
+			'salary': [10000, 15000]
+		});
+	}
 })
 
-.controller('SettingsCtrl', function($scope) {
+.controller('JobsDetailCtrl', function ($scope) {
+
+})
+
+.controller('SettingsCtrl', function ($scope) {
 });

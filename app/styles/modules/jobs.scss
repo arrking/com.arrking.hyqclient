@@ -1,0 +1,66 @@
+.list-positions .item
+{
+    padding: 0;
+    a
+    {
+        text-decoration: none;
+    }
+    p
+    {
+        margin-bottom: 0;
+    }
+}
+
+.detail-positions .list
+{
+    margin-top: 10px;
+}
+
+.detail-positions .item
+{
+    p
+    {
+        margin-bottom: 0;
+    }
+}
+
+.detail-positions .row
+{
+    padding: 0;
+    padding-bottom: 5px;
+    .col
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.salary
+{
+    font-size: 18px;
+    color: #b83;
+}
+
+.date
+{
+    color: #999;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.detail-positions .connect
+{
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .phone
+    {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .button
+    {
+        margin: 0;
+    }
+}

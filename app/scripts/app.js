@@ -78,6 +78,16 @@ angular.module('Hyqclient', ['ionic', 'config', 'Hyqclient.controllers', 'Hyqcli
       }
     })
 
+    .state('tab.jobs-detail', {
+      url: '/jobs/detail/:positionId',
+      views: {
+        'tab-jobs': {
+          templateUrl: 'templates/jobs-detail.html',
+          controller: 'JobsDetailCtrl'
+        }
+      }
+    })
+
     .state('tab.settings', {
       url: '/settings',
       views: {
