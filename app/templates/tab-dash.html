@@ -1,5 +1,14 @@
-<ion-view title="Dashboard">
-  <ion-content class="has-header padding">
-    <h1>Dash</h1>
-  </ion-content>
+<ion-view title="餐饮圈">
+	<!-- http://ionicframework.com/docs/api/directive/ionSlideBox/ -->
+	<ion-slide-box class="has-header" show-pager="true" auto-play="true" does-continue="true">
+		<ion-slide>
+			<img src="images/dummy-activity1.jpg" ng-click="handleSlideClicked('1')"/>
+		</ion-slide>
+		<ion-slide>
+			<img src="images/dummy-activity2.jpg" ng-click="handleSlideClicked('2')"/>
+		</ion-slide>
+		<ion-slide>
+			<img src="images/dummy-activity3.jpg" ng-click="handleSlideClicked('3')"/>
+		</ion-slide>
+	</ion-slide-box>
 </ion-view>

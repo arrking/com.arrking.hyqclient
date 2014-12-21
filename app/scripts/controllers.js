@@ -2,13 +2,17 @@
 angular.module('Hyqclient.controllers', [])
 
 .controller('DashCtrl', function($scope) {
+
+	$scope.handleSlideClicked = function(index) {
+		alert('open slide detail ' + index);
+	}
 })
 
 .controller('ContactsCtrl', function($scope) {
 
 	$scope.contacts = [];
 
-	for(var idx = 0; idx < 50; idx++) {
+	for (var idx = 0; idx < 50; idx++) {
 		$scope.contacts.push({
 			'name': {
 				'firstname': '锋',
@@ -24,11 +28,9 @@ angular.module('Hyqclient.controllers', [])
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+	$scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('JobsCtrl', function($scope) {
-})
+.controller('JobsCtrl', function($scope) {})
 
-.controller('SettingsCtrl', function($scope) {
-});
+.controller('SettingsCtrl', function($scope) {});
