@@ -2,7 +2,6 @@
 angular.module('Hyqclient.controllers', [])
 
 .controller('DashCtrl', function($scope) {
-
 	$scope.handleSlideClicked = function(index) {
 	};
 })
@@ -30,7 +29,7 @@ angular.module('Hyqclient.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('JobsCtrl', function ($scope) {
+.controller('JobsCtrl', function ($scope, $log) {
 	$scope.positions = [];
 
 	for(var idx = 0; idx < 20; idx++) {
@@ -45,7 +44,16 @@ angular.module('Hyqclient.controllers', [])
 })
 
 .controller('JobsDetailCtrl', function ($scope) {
-
+    $scope.$root.tabsHidden = 'hide-tabs';
+    
+    $scope.$on('$destroy', function() {
+        try {
+            // hidden the tabs when ordering
+            $scope.$root.tabsHidden = '';
+        } catch (e) {
+            $log.error(e);
+        }
+    });
 })
 
 .controller('SettingsCtrl', function ($scope) {
