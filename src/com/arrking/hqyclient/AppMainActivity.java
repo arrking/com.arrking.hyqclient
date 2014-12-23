@@ -38,6 +38,7 @@ import com.arrking.hqyclient.ui.toolkit.ToolkitIndexActivity;
 public class AppMainActivity extends TabActivity
         implements RadioGroup.OnCheckedChangeListener {
 
+    private static final String TAG = new String("AppMainActivity");
     private RadioGroup appMainTab;
     private TabHost appTabHost;
     private Intent dashIntent;
@@ -114,7 +115,7 @@ public class AppMainActivity extends TabActivity
         companiesRadioButton.setId(2);
         companiesRadioButton.setText(R.string.store_index);
         companiesRadioButton.setTextSize(1, 15.0F);
-        companiesRadioButton.setClickable(false);
+//        companiesRadioButton.setClickable(false);
         this.appMainTab.addView(companiesRadioButton);
 
         // current user
@@ -146,7 +147,7 @@ public class AppMainActivity extends TabActivity
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-
+    public void  onCheckedChanged(RadioGroup group, int checkedId) {
+        Log.d(TAG, "checkedId " + Integer.toString(checkedId));
     }
 }
