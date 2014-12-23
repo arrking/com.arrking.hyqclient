@@ -58,7 +58,7 @@ public class AppMainActivity extends TabActivity
         RadioButton localRadioButton2 = new RadioButton(this);
         setTabBtn(localRadioButton2);
         localRadioButton2.setId(3);
-        localRadioButton2.setText(R.string.member);
+        localRadioButton2.setText(R.string.me);
         localRadioButton2.setTextSize(1, 15.0F);
         this.appMainTab.addView(localRadioButton2);
 
