@@ -149,5 +149,35 @@ public class AppMainActivity extends TabActivity
     @Override
     public void  onCheckedChanged(RadioGroup group, int checkedId) {
         Log.d(TAG, "checkedId " + Integer.toString(checkedId));
+        RadioButton localRadioButton0  = (RadioButton)group.getChildAt(0);
+        RadioButton localRadioButton1  = (RadioButton)group.getChildAt(1);
+        RadioButton localRadioButton2  = (RadioButton)group.getChildAt(2);
+        RadioButton localRadioButton3  = (RadioButton)group.getChildAt(3);
+        RadioButton localRadioButton4  = (RadioButton)group.getChildAt(4);
+
+        switch(checkedId){
+            case 0:
+                this.appTabHost.setCurrentTabByTag("tab_info");
+                localRadioButton0.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.info_icon_selected, 0, 0);
+                break;
+            case 1:
+                this.appTabHost.setCurrentTabByTag("tab_trade");
+                localRadioButton1.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.trade_icon_selected, 0, 0);
+                break;
+            case 2:
+                this.appTabHost.setCurrentTabByTag("tab_store");
+                localRadioButton2.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.store_icon_selected, 0, 0);
+                break;
+            case 3:
+                this.appTabHost.setCurrentTabByTag("tab_member");
+                localRadioButton3.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.member_icon_selected, 0, 0);
+                break;
+            default:
+                this.appTabHost.setCurrentTabByTag("tab_more");
+                localRadioButton4.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.more_icon_selected, 0, 0);
+                break;
+
+        }
+
     }
 }
