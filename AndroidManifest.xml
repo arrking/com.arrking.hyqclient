@@ -13,5 +13,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.companies.ComIndexActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.contacts.ContxIndexActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.dashboard.DashIndexActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.profile.ProfileIndexActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.toolkit.ToolkitIndexActivity" android:screenOrientation="portrait"/>
     </application>
 </manifest>
