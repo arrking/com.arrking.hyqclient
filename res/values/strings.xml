@@ -15,7 +15,7 @@
     <string name="wx_app_id">wx3a0f4d386cef3f29</string>
     <string name="app_download_url">http://cyej.hy.yunlai.cn/app</string>
     <string name="info">首页</string>
-    <string name="trade">供求</string>
+    <string name="trade">通讯录</string>
     <string name="store">商铺</string>
     <string name="member">会员</string>
     <string name="more">百宝箱</string>
@@ -53,7 +53,7 @@
     <string name="know_app_title">了解企业移动APP</string>
     <string name="loadapp_title">下载企业移动APP,更多精彩即刻体验！</string>
     <string name="read_original_text">阅读原文</string>
-    <string name="firstCat">e家动态</string>
+    <string name="firstCat">动态</string>
     <string name="AllInfo">全部</string>
     <string name="has_new_data">有新数据来了哦...</string>
     <string name="info_detail">详情</string>
