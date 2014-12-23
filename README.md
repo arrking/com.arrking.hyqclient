@@ -16,44 +16,15 @@ Common user is the not logged in user. He can read news, ads, job opennings. But
 
 ## Project Management 
 
-https://github.com/arrking/com.arrking.tory
+https://github.com/arrking/com.arrking.hyqclient
 
 ## Engineering 
 
 
 ### Installations 
-* Install xCode, NodeJS
+* Install Java SDK 7, Apache Ant, Android Dev Kit, IntelliJ IDEA 13+
 * #TODO
 ## Implementation of hyqclient
 
 hyqclient's backend is [hyqserver](https://github.com/arrking/com.arrking.hyqserver). It hosts the data and serve the management console. Only Admin user can login [hyqserver](https://github.com/arrking/com.arrking.hyqserver).
 
-
-## Android Commands
-List Devices
-```
-adb devices
-```
-
-## Debugging
-* Print logs
-
-```
-platforms/android/cordova/log | grep "Web Console"
-
-OR
-
-platforms/android/cordova/log > /tmp/and.log
-tail -f /tmp/and.log| grep "Web Console"
-```
-
-* Launch App
-
-```
-grunt run:android
-```
-
-## Serve ```www``` 
-```
-grunt serve
-```
