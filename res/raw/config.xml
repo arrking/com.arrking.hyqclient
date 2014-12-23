@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- 商店信息 -->
+	<shopInfos>
+		<infoItem name="siteId">13</infoItem>
+		<infoItem name="siteDomain">cyej.hy.yunlai.cn</infoItem>
+		<!-- <url name="accessLink">http://app.yunlai.cn==202.104.149.214</url> -->
+		<url name="accessLink">http://app.yunlai.cn:8080/HY_APPInterfaceServer</url>
+	</shopInfos>
+	
+<!-- tab -->
+	<tab>
+		<tabItem name="info" status="1" lable="首页"/>
+		<tabItem name="trade" status="1" lable="通讯录"/>
+		<tabItem name="store" status="1" lable="单位"/>
+		<tabItem name="member" status="1" lable="我"/>
+		<tabItem name="more" status="1" lable="百宝箱"/>
+	</tab>
+
+<!-- 供求 -->
+	<trades>
+		<tradeItem name="recommend" status="1" lable="供应"/>
+		<tradeItem name="discount" status="1" lable="求购"/>
+	</trades>
+	
+<!-- 默认文字 -->
+	<strings>
+		<string name="appName">cyej</string>
+		<string name="share">餐饮e家移动APP，以最丰富的人脉资源优势，为餐饮从业人士之间搭建一个共赢的合作平台、财富平台，赶紧下载吧！（分享自@[餐饮e家]客户端）</string>
+		<string name="shareApp">我正在使用一款非常不错的应用[餐饮e家],赶快来体验吧~</string>
+		<string name="emailSubject"></string>
+		<string name="emailContent"></string>
+	</strings>
+	
+<!-- 更多可配置项 -->
+	<moreList >
+		
+	</moreList>
+
+<!-- 可选模块 -->
+	<optionalMoudles>
+	    <mod name="reserve">0</mod>
+	</optionalMoudles>
+</app>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/top_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/head_title_size" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/store_latest" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBackButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_icon" />
+    </FrameLayout>
+    <cn.yunlai.component.PullToRefreshListView android:id="@id/storeLatestListView" style="@style/store_list" />
+</LinearLayout>

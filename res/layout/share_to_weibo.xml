@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/share_to_weibo_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/weibo_share_linearLayout" android:background="@color/share_to_weibo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/app_top_bar" style="@style/top_bar_layout">
+            <ImageView android:id="@id/share_weibo_top_return_Button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
+            <TextView android:id="@id/weibo_bind_top_TextView" android:text="分享到微博" android:layout_toRightOf="@id/top_return_Button" style="@style/top_bar_text" />
+            <ImageView android:id="@id/comment_send" android:background="@drawable/comment_publish" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/share_send_top" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_to_weibo_LinearLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0" android:layout_below="@id/app_top_bar">
+            <ImageView android:id="@id/comment_edit_top" android:background="@drawable/edit_text_bg1_01" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:textSize="16.0dip" android:textColor="@color/black" android:gravity="top" android:id="@id/comment_edit" android:background="@drawable/edit_text_bg1_02" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:layout_weight="2.0" />
+            <ImageView android:id="@id/comment_edit_bottom" android:background="@drawable/edit_text_bg1_04" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="left" android:orientation="horizontal" android:id="@id/share_to_weibo_bottom_LinearLayout" android:background="@drawable/share_bottom_bg" android:paddingLeft="20.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:layout_weight="0.0" android:layout_below="@id/app_top_bar">
+            <FrameLayout android:id="@id/share_pic_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/share_pic" android:background="@drawable/share_pic_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ImageView android:id="@id/small_image" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:layout_width="68.0dip" android:layout_height="48.0dip" android:src="@drawable/share_default_pic" />
+            </FrameLayout>
+            <CheckBox android:id="@id/share_pic_check" android:background="@drawable/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:checked="true" android:button="@null" android:layout_toRightOf="@id/share_pic_layout" />
+            <TextView android:textSize="@dimen/share_content" android:textColor="#ff555b6d" android:id="@id/weiboUpdater_rtAndComment_tv" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="@string/send_with_pic" android:layout_toRightOf="@id/share_pic_check" />
+            <ImageView android:id="@id/share_send" android:background="@drawable/send_default" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/share_send" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/hot_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/member_topbar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/msg_detail_back" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
+        <TextView android:id="@id/msg_detail_name" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/msg_detail_scroll" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/msg_detail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <LinearLayout android:background="@drawable/detail_bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/msg_edittext" android:background="@drawable/input_box_bg" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="说两句" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/send_msg_Button" android:src="@drawable/comment_publish" style="@style/detail_btn" />
+    </LinearLayout>
+</LinearLayout>

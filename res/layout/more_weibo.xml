@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/detail_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_bar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/top_return_Button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" android:onClick="back" style="@style/top_bar_button" />
+        <TextView android:id="@id/app_top_TextView" android:text="@string/setting_weibo" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/detail_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_bar">
+        <LinearLayout android:orientation="horizontal" android:id="@id/xinlang" android:background="@drawable/more_list" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="0.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sina_logo" />
+            <TextView android:textSize="21.0dip" android:textColor="@color/black" android:id="@id/sinaText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/XLweibo" android:layout_weight="1.0" />
+            <LinearLayout android:id="@id/switch_xinlang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip">
+                <include android:layout_width="60.0dip" android:layout_height="30.0dip" layout="@layout/sidebutton" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/more_tencenweibo" android:background="@drawable/more_list" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_below="@id/xinlang">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tenxun_logo" />
+            <TextView android:textSize="21.0dip" android:textColor="@color/black" android:id="@id/tencentTxet" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/tenxun" android:layout_weight="1.0" />
+            <LinearLayout android:id="@id/switch_tenxun" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:layout_width="60.0dip" android:layout_height="30.0dip" layout="@layout/tencentsidebutton" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

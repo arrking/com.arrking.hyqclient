@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/wantedRoot_frameLayout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/wanted_linearlayout" android:background="@drawable/gallery_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/gallery_btn_left" android:background="@drawable/gallery_btn_left" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <cn.yunlai.component.MyGallery android:id="@id/gallery_wanted" android:spacing="20.0dip" android:layout_weight="1.0" style="@style/gallery_cat" />
+            <ImageView android:id="@id/gallery_btn_right" android:background="@drawable/gallery_btn_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/wanted_list_relativeLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/wanted_linearlayout">
+            <cn.yunlai.component.PullToRefreshListView android:id="@id/wantedListView" style="@style/info_list" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

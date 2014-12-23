@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/newest_info_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/newest_info_topbar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/top_return_Button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
+        <TextView android:id="@id/app_top_TextView" android:text="@string/newest_info" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/index_recommend_relativeLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/newest_info_topbar">
+        <cn.yunlai.component.PullToRefreshListView android:id="@id/recommend_listview" style="@style/info_list" />
+    </RelativeLayout>
+</RelativeLayout>

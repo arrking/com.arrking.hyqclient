@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/browser_top_bar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/brwoser_top_back_button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
+        <TextView android:gravity="center" android:id="@id/webview_title_TextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="标题" android:layout_toRightOf="@id/brwoser_top_back_button" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/webview_relativelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/browser_top_bar">
+        <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

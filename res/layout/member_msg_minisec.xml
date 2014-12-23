@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/hot_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/member_topbar" style="@style/top_bar_layout">
+        <Button android:id="@id/member_msg_back" android:background="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
+        <TextView android:textColor="@color/white" android:id="@id/msg_detail_name" android:text="@string/member_minisec" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <ListView android:id="@id/member_msg_minisec_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+</LinearLayout>

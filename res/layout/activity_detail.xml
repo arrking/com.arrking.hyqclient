@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/detail_top_layout" android:background="@drawable/top_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/head_title_size" android:textColor="@color/top_bar_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/at_detail" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/back_button_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_icon" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/share_button_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_share_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:id="@id/detail_bottom_layout" android:background="@drawable/store_detail_tab_bg" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textColor="@color/light_black" android:gravity="center" android:id="@id/at_interest" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/interest" android:drawableTop="@drawable/icon_interesting" />
+            <TextView android:textSize="@dimen/interest_num" android:textColor="@color/brown" android:gravity="center" android:id="@id/at_interest_num" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/at_interest" android:background="@drawable/vertical_line" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/join_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textColor="@color/light_black" android:gravity="center" android:id="@id/at_join" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="要参加" android:drawableTop="@drawable/icon_join" />
+            <TextView android:textSize="@dimen/interest_num" android:textColor="@color/brown" android:gravity="center" android:id="@id/at_join_num" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/detail_bottom_layout" android:layout_below="@id/detail_top_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <cn.yunlai.component.MyViewPager android:id="@id/pic_pager" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <cn.yunlai.component.CirclePageIndicator android:layout_gravity="bottom|center" android:id="@id/pic_indicator" android:background="#00000000" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:strokeWidth="0.0dip" app:fillColor="#ffffffff" app:pageColor="#60ffffff" app:radius="3.0dip" app:strokeColor="#00000000" />
+            </FrameLayout>
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/at_title" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="深圳市南山区世界字体设计年展赛" />
+            <ImageView android:background="@drawable/horizon_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/gray" android:id="@id/at_organizer" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="华中企业家俱乐部" android:drawableLeft="@drawable/icon_organizer" android:drawablePadding="10.0dip" />
+            <ImageView android:background="@drawable/horizon_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/gray" android:id="@id/at_time" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2013/05/01 14:00" android:drawableLeft="@drawable/icon_date_time" android:drawablePadding="10.0dip" />
+            <ImageView android:background="@drawable/horizon_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/gray" android:id="@id/at_telephone" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="13902525508" android:drawableLeft="@drawable/icon_telephone" android:drawableRight="@drawable/right_arrow" android:drawablePadding="10.0dip" />
+            <ImageView android:background="@drawable/horizon_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/gray" android:id="@id/at_address" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="深圳市宝安区时尚创意园" android:drawableLeft="@drawable/icon_location" android:drawableRight="@drawable/right_arrow" android:drawablePadding="10.0dip" />
+            <TextView android:textColor="#ff999999" android:id="@id/at_pic_num" android:background="#ffeeeeee" android:paddingLeft="10.0dip" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/at_pic_num_desc" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/add_picture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:src="@drawable/button_camera" />
+                <HorizontalScrollView android:id="@id/horizontal_scroll" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <cn.yunlai.component.LinearLayoutForListView android:id="@id/picture_display" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/at_report" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:background="@drawable/horizon_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:background="@drawable/mem_col_bg" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="活动现场报道" />
+            </LinearLayout>
+            <TextView android:textColor="#ff999999" android:background="#ffeeeeee" android:paddingLeft="10.0dip" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="活动简介" />
+            <TextView android:id="@id/at_introduce" android:paddingLeft="10.0dip" android:paddingTop="25.0dip" android:paddingRight="10.0dip" android:paddingBottom="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

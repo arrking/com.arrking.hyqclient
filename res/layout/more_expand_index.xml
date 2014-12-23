@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/pic_detail_topbar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/top_return_Button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" android:onClick="back" style="@style/top_bar_button" />
+        <TextView android:id="@id/pic_top_TextView" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/image_linear" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/pic_desc_layout" android:layout_below="@id/pic_detail_topbar">
+        <cn.yunlai.component.MyGallery android:id="@id/image_gallery" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spacing="25.0dip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/pic_desc_layout" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0dip" android:textColor="@color/black" android:id="@id/pic_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/image_nodata_linear" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/pic_detail_topbar">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/defaule" />
+    </LinearLayout>
+</RelativeLayout>

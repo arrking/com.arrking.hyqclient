@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/info_detail_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/wanted_detail_topbar" style="@style/top_bar_layout">
+        <ImageView android:id="@id/top_return_Button" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" android:onClick="back" style="@style/top_bar_button" />
+        <TextView android:id="@id/wanted_app_top_TextView" android:text="@string/info_detail" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/comment_edit" android:background="@drawable/comment_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/info_detail_bottom_layout" android:layout_below="@id/wanted_detail_topbar">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:orientation="vertical" android:id="@id/wanted_pic_layout" android:background="#ffcccccc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <uk.co.jasonfry.android.tools.ui.SwipeView android:id="@id/productwanted_detail_swipe_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <uk.co.jasonfry.android.tools.ui.PageControl android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/wanted_detil_page_control" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <RelativeLayout android:id="@id/wanted_relative_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <TextView android:textSize="22.0dip" android:textColor="@color/black" android:id="@id/wanted_title_view" android:paddingLeft="10.0dip" android:paddingTop="20.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textColor="@color/black" android:id="@id/wanted_intro" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="简        介:" android:layout_below="@id/wanted_title_view" />
+                <TextView android:textColor="@color/black" android:id="@id/introConten" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/wanted_intro" />
+                <TextView android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_below="@id/introConten" />
+            </RelativeLayout>
+            <TextView android:textSize="20.0dip" android:textColor="@color/black" android:id="@id/wanted_companyname" android:background="@drawable/company_bar" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/black" android:id="@id/wanted_company_tel" android:background="@drawable/companyphone" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:layout_width="fill_parent" android:layout_height="60.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/wanted_detail_bottom_layout" android:background="@drawable/searchbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <EditText android:textColor="@color/black" android:id="@id/submit_edittext" android:background="@drawable/input_box_bg" android:paddingLeft="15.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/for_return" android:layout_weight="1.0" />
+        <ImageView android:id="@id/wanted_collection_Button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:src="@drawable/iconfavorite" />
+        <ImageView android:id="@id/publish_comment_Button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:src="@drawable/comment_publish" />
+    </LinearLayout>
+</RelativeLayout>

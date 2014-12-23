@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/hot_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/quick_navi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <LinearLayout android:gravity="center" android:id="@id/newest_info" android:background="@drawable/bg_index_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_common_activity" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/light_black" android:gravity="center" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_platform" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/newest_member" android:background="@drawable/bg_index_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_common_newmember" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/light_black" android:gravity="center" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newest_member" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/recommend_relativelayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/quick_navi">
+        <cn.yunlai.component.MyGallery android:id="@id/recommend_company" android:background="@drawable/alive_member_bg" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spacing="10.0dip" />
+    </RelativeLayout>
+</RelativeLayout>
