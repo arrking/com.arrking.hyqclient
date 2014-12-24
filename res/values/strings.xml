@@ -12,5 +12,7 @@
     <string name="title_activity_at">AtActivity</string>
     <string name="title_activity_msg">MsgActivity</string>
     <string name="title_activity_more">MoreActivity</string>
+    <string name="loading_tip">云端同步中...</string>
+    <string name="pull_to_refresh_last_time_format">MM月dd日 HH:mm</string>
 
 </resources>

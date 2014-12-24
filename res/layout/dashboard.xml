@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical"
-  android:background="@color/white">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
 
-	<include android:id="@+id/layout_title_bar" layout="@layout/tilte_bar"/>
+    <include android:id="@+id/layout_title_bar" layout="@layout/tilte_bar"/>
 
-    <RelativeLayout android:id="@id/info_cat_relativeLayout" android:visibility="gone" android:layout_below="@id/info_top_bar" style="@style/gallery_cat_relativelayout">
-        <ImageView android:id="@id/gallery_btn_left" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gallery_btn_left" android:layout_alignParentLeft="true" />
-        <android.support.v4.view.ViewPager android:id="@id/info_cat" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_toLeftOf="@id/gallery_btn_right" android:layout_toRightOf="@id/gallery_btn_left" />
-        <ImageView android:id="@id/gallery_btn_right" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gallery_btn_right" android:layout_alignParentRight="true" />
+    <RelativeLayout android:id="@id/index_recommend_relativelayout" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:layout_below="@id/layout_title_bar">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/recommend_listview"
+                                                                  style="@style/info_list"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/infocat_list_relativeLayout" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:layout_below="@id/index_recommend_relativelayout">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/infocat_listview"
+                                                                  style="@style/info_list"/>
     </RelativeLayout>
 
 </RelativeLayout>
