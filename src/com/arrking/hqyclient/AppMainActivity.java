@@ -43,7 +43,7 @@ public class AppMainActivity extends TabActivity
 
         RadioGroup radioGroup =  (RadioGroup) this.findViewById(R.id.main_radio);
         final RadioButton rb=(RadioButton)this.findViewById(R.id.rb_dash);
-        rb.setBackgroundResource(R.drawable.tabhost_press);
+        rb.setBackgroundResource(R.drawable.tabhost_selected);
 
         radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener()
         {
