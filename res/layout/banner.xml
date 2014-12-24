@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/banner_RelativeLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/pretty_pic_level_3_LinearLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <uk.co.jasonfry.android.tools.ui.SwipeView android:id="@id/banner_swipe_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <uk.co.jasonfry.android.tools.ui.PageControl android:gravity="center" android:layout_gravity="bottom|right|center" android:orientation="horizontal" android:id="@id/banner_page_control" android:background="@drawable/page_control_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
-    </FrameLayout>
-</RelativeLayout>

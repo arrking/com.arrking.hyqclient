@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/hot_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/member_topbar" style="@style/top_bar_layout">
-        <ImageView android:id="@id/msg_center_back" android:src="@drawable/back_icon" android:layout_alignParentLeft="true" style="@style/top_bar_button" />
-        <TextView android:text="消息中心" android:layout_centerHorizontal="true" style="@style/top_bar_text" />
-    </RelativeLayout>
-    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/msg_person_listview" style="@style/store_list" />
-</LinearLayout>

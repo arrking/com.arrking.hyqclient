@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/sv_container" android:background="@drawable/usage_list_dark" android:layout_width="90.0dip" android:layout_height="25.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/iv_switch_cursor" android:background="@drawable/usage_list_green" android:layout_width="50.0dip" android:layout_height="24.0dip" android:layout_marginLeft="0.5dip" android:layout_marginRight="0.5dip" android:layout_centerVertical="true" />
-    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:gravity="center" android:id="@id/switch_text_true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开" android:layout_weight="1.0" />
-        <TextView android:gravity="center" android:id="@id/switch_text_false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关" android:layout_weight="1.0" />
-    </LinearLayout>
-</RelativeLayout>

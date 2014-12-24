@@ -1,183 +1,129 @@
 package com.arrking.hqyclient;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.app.TabActivity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.MeasureSpec;
-import android.widget.FrameLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
-
-import com.arrking.hqyclient.ui.companies.ComIndexActivity;
-import com.arrking.hqyclient.ui.contacts.ContxIndexActivity;
 import com.arrking.hqyclient.ui.dashboard.DashIndexActivity;
-import com.arrking.hqyclient.ui.profile.ProfileIndexActivity;
-import com.arrking.hqyclient.ui.toolkit.ToolkitIndexActivity;
 
+@SuppressWarnings("deprecation")
 public class AppMainActivity extends TabActivity
-        implements RadioGroup.OnCheckedChangeListener {
+{
+//    private TabHost tabHost=null;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState)
+//    {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.app_main);
+//        tabHost=(TabHost)findViewById(android.R.id.tabhost);
+//        tabHost.setFocusable(true);
+//        TabHost.TabSpec tabSpec=tabHost.newTabSpec("1");
+//        Intent intent=new Intent(this, DashIndexActivity.class);
+//        tabSpec.setIndicator("工作区").setContent(intent);
+//        tabHost.setup(this.getLocalActivityManager());
+//        tabHost.addTab(tabSpec);
+//
+//        TabHost.TabSpec tabSpec2=tabHost.newTabSpec("2");
+//        Intent intent2=new Intent(this, DashIndexActivity.class);
+//        tabSpec2.setIndicator("娱乐生活").setContent(intent2);
+//        tabHost.addTab(tabSpec2);
+//
+//        TabHost.TabSpec tabSpec3=tabHost.newTabSpec("3");
+//        Intent intent3=new Intent(this, DashIndexActivity.class);
+//        tabSpec3.setIndicator("工具箱").setContent(intent3);
+//        tabHost.addTab(tabSpec3);
+//
+//        TabHost.TabSpec tabSpec4=tabHost.newTabSpec("4");
+//        Intent intent4=new Intent(this, DashIndexActivity.class);
+//        tabSpec4.setIndicator("个人中心").setContent(intent4);
+//        tabHost.addTab(tabSpec4);
+//        tabHost.setCurrentTab(0);
+//        RadioGroup radioGroup=(RadioGroup)findViewById(R.id.main_radiogroup);
+//        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+//
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId)
+//            {
+//                switch (checkedId) {
+//                    case R.id.workspace:
+//                        tabHost.setCurrentTab(0);
+//                        break;
+//                    case R.id.entertainment:
+//                        tabHost.setCurrentTab(1);
+//                        break;
+//                    case R.id.tools:
+//                        tabHost.setCurrentTab(2);
+//                        break;
+//                    case R.id.setting:
+//                        tabHost.setCurrentTab(3);
+//                        break;
+//
+//                }
+//            }
+//        });
+//    }
+private TabHost tabHost;
 
-    private static final String TAG = new String("AppMainActivity");
-    private RadioGroup appMainTab;
-    private TabHost appTabHost;
-    private Intent dashIntent;
-    private Intent contactsIntent;
-    private Intent companyIntent;
-    private Intent profileIntent;
-    private Intent toolkitIntent;
+    private static final String HOME_TAB="home";
+    private static final String AT_TAB="at";
+    private static final String MSG_TAB="msg";
+    private static final String MORE_TAB="more";
 
-    /**
-     * Called when the activity is first created.
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.app_main);
-        this.appMainTab = ((RadioGroup) findViewById(R.id.app_main_tab_rg));
-        this.appMainTab.setBackgroundResource(R.drawable.bottom_bar);
-        int i = View.MeasureSpec.makeMeasureSpec(0, 0);
-        int j = View.MeasureSpec.makeMeasureSpec(0, 0);
-        this.appMainTab.measure(i, j);
-        initTab();
-        this.appMainTab.setOnCheckedChangeListener(this);
-        setupIntent();
-        
-    }
+        setContentView(R.layout.main);
 
-    private void setupIntent() {
-        this.appTabHost = getTabHost();
-        TabHost localTabHost = this.appTabHost;
-        // dashboard
-        this.dashIntent = new Intent(this, DashIndexActivity.class);
-        this.dashIntent.putExtra("bottomHeight", this.appMainTab.getHeight());
-        localTabHost.addTab(buildTabSpec("tab_info", R.string.info, R.drawable.info_icon, this.dashIntent));
-        // contacts
-        this.contactsIntent = new Intent(this, ContxIndexActivity.class);
-        localTabHost.addTab(buildTabSpec("tab_trade", R.string.trade, R.drawable.trade_icon, this.contactsIntent));
-        // companies
-        this.companyIntent = new Intent(this, ComIndexActivity.class);
-        localTabHost.addTab(buildTabSpec("tab_store", R.string.store, R.drawable.store_icon, this.companyIntent));
-        // profile
-        this.profileIntent = new Intent(this, ProfileIndexActivity.class);
-        localTabHost.addTab(buildTabSpec("tab_member", R.string.member, R.drawable.member_icon, this.profileIntent));
-        // toolkit
-        this.toolkitIntent = new Intent(this, ToolkitIndexActivity.class);
-        localTabHost.addTab(buildTabSpec("tab_more", R.string.more, R.drawable.more_icon, this.toolkitIntent));
-    }
+        tabHost = this.getTabHost();
+        TabSpec homeSpec=tabHost.newTabSpec(HOME_TAB).setIndicator(HOME_TAB).setContent(new Intent(this, DashIndexActivity.class));
+        TabSpec atSpec=tabHost.newTabSpec(AT_TAB).setIndicator(AT_TAB).setContent(new Intent(this,DashIndexActivity.class));
+        TabSpec msgSpec=tabHost.newTabSpec(MSG_TAB).setIndicator(MSG_TAB).setContent(new Intent(this,DashIndexActivity.class));
+        TabSpec moreSpec=tabHost.newTabSpec(MORE_TAB).setIndicator(MORE_TAB).setContent(new Intent(this,DashIndexActivity.class));
 
-    private TabHost.TabSpec buildTabSpec(String paramString, int paramInt1, int paramInt2, Intent paramIntent)
-    {
-        return this.appTabHost.newTabSpec(paramString).setIndicator(null, null).setContent(paramIntent);
-    }
+        tabHost.addTab(homeSpec);
+        tabHost.addTab(atSpec);
+        tabHost.addTab(msgSpec);
+        tabHost.addTab(moreSpec);
 
-    // init bottom tab as first navigator
-    private void initTab() {
-        // home button
-        RadioButton dashbordRadioButton = new RadioButton(this);
-        setTabBtn(dashbordRadioButton);
-        dashbordRadioButton.setId(0);
-        dashbordRadioButton.setText(R.string.info);
-        dashbordRadioButton.setTextSize(1, 15.0F);
-        this.appMainTab.addView(dashbordRadioButton);
+        tabHost.setCurrentTabByTag(HOME_TAB);
 
-        // contacts
-        RadioButton contactsRadioButton = new RadioButton(this);
-        setTabBtn(contactsRadioButton);
-        contactsRadioButton.setId(1);
-        contactsRadioButton.setText(R.string.trade);
-        contactsRadioButton.setTextSize(1, 15.0F);
-        this.appMainTab.addView(contactsRadioButton);
+        RadioGroup radioGroup =  (RadioGroup) this.findViewById(R.id.main_radio);
+        final RadioButton rb=(RadioButton)this.findViewById(R.id.rb_home);
+        rb.setBackgroundResource(R.drawable.tabhost_press);
 
-        // companies
-        RadioButton companiesRadioButton = new RadioButton(this);
-        setTabBtn(companiesRadioButton);
-        companiesRadioButton.setId(2);
-        companiesRadioButton.setText(R.string.store_index);
-        companiesRadioButton.setTextSize(1, 15.0F);
-//        companiesRadioButton.setClickable(false);
-        this.appMainTab.addView(companiesRadioButton);
+        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                rb.setBackgroundResource(R.drawable.tabhost_bg_selector);
+                switch (checkedId)
+                {
+                    case R.id.rb_home:
+                        tabHost.setCurrentTabByTag(HOME_TAB);
+                        break;
 
-        // current user
-        RadioButton profileRadioButton = new RadioButton(this);
-        setTabBtn(profileRadioButton);
-        profileRadioButton.setId(3);
-        profileRadioButton.setText(R.string.me);
-        profileRadioButton.setTextSize(1, 15.0F);
-        this.appMainTab.addView(profileRadioButton);
+                    case R.id.rb_at:
+                        tabHost.setCurrentTabByTag(AT_TAB);
+                        break;
 
-        // toolkit
-        RadioButton toolkitRadioButton = new RadioButton(this);
-        setTabBtn(toolkitRadioButton);
-        toolkitRadioButton.setId(4);
-        toolkitRadioButton.setText(R.string.more);
-        toolkitRadioButton.setTextSize(1, 15.0F);
-        this.appMainTab.addView(toolkitRadioButton);
-    }
+                    case R.id.rb_mess:
+                        tabHost.setCurrentTabByTag(MSG_TAB);
+                        break;
 
-    // set child btn into tab
-    private void setTabBtn(RadioButton paramRadioButton) {
-        paramRadioButton.setGravity(1);
-        RadioGroup.LayoutParams localLayoutParams = new RadioGroup.LayoutParams(-2, -1);
-        localLayoutParams.setMargins(1, 1, 1, 1);
-        localLayoutParams.weight = 1.0F;
-        paramRadioButton.setButtonDrawable(R.drawable.none);
-        paramRadioButton.setPadding(0, 0, 0, 0);
-        paramRadioButton.setLayoutParams(localLayoutParams);
-    }
+                    case R.id.rb_more:
+                        tabHost.setCurrentTabByTag(MORE_TAB);
+                        break;
 
-    @Override
-    public void  onCheckedChanged(RadioGroup group, int checkedId) {
-        Log.d(TAG, "checkedId " + Integer.toString(checkedId));
-        RadioButton localRadioButton0  = (RadioButton)group.getChildAt(0);
-        RadioButton localRadioButton1  = (RadioButton)group.getChildAt(1);
-        RadioButton localRadioButton2  = (RadioButton)group.getChildAt(2);
-        RadioButton localRadioButton3  = (RadioButton)group.getChildAt(3);
-        RadioButton localRadioButton4  = (RadioButton)group.getChildAt(4);
-
-        switch(checkedId){
-            case 0:
-                this.appTabHost.setCurrentTabByTag("tab_info");
-                localRadioButton0.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.info_icon_selected, 0, 0);
-                break;
-            case 1:
-                this.appTabHost.setCurrentTabByTag("tab_trade");
-                localRadioButton1.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.trade_icon_selected, 0, 0);
-                break;
-            case 2:
-                this.appTabHost.setCurrentTabByTag("tab_store");
-                localRadioButton2.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.store_icon_selected, 0, 0);
-                break;
-            case 3:
-                this.appTabHost.setCurrentTabByTag("tab_member");
-                localRadioButton3.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.member_icon_selected, 0, 0);
-                break;
-            default:
-                this.appTabHost.setCurrentTabByTag("tab_more");
-                localRadioButton4.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.more_icon_selected, 0, 0);
-                break;
-
-        }
+                    default:
+                        break;
+                }
+            }
+        });
 
     }
+
+
 }
