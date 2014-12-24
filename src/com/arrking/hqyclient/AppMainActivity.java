@@ -16,60 +16,7 @@ import com.arrking.hqyclient.ui.profile.ProfileIndexActivity;
 @SuppressWarnings("deprecation")
 public class AppMainActivity extends TabActivity
 {
-//    private TabHost tabHost=null;
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState)
-//    {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.app_main);
-//        tabHost=(TabHost)findViewById(android.R.id.tabhost);
-//        tabHost.setFocusable(true);
-//        TabHost.TabSpec tabSpec=tabHost.newTabSpec("1");
-//        Intent intent=new Intent(this, DashIndexActivity.class);
-//        tabSpec.setIndicator("工作区").setContent(intent);
-//        tabHost.setup(this.getLocalActivityManager());
-//        tabHost.addTab(tabSpec);
-//
-//        TabHost.TabSpec tabSpec2=tabHost.newTabSpec("2");
-//        Intent intent2=new Intent(this, DashIndexActivity.class);
-//        tabSpec2.setIndicator("娱乐生活").setContent(intent2);
-//        tabHost.addTab(tabSpec2);
-//
-//        TabHost.TabSpec tabSpec3=tabHost.newTabSpec("3");
-//        Intent intent3=new Intent(this, DashIndexActivity.class);
-//        tabSpec3.setIndicator("工具箱").setContent(intent3);
-//        tabHost.addTab(tabSpec3);
-//
-//        TabHost.TabSpec tabSpec4=tabHost.newTabSpec("4");
-//        Intent intent4=new Intent(this, DashIndexActivity.class);
-//        tabSpec4.setIndicator("个人中心").setContent(intent4);
-//        tabHost.addTab(tabSpec4);
-//        tabHost.setCurrentTab(0);
-//        RadioGroup radioGroup=(RadioGroup)findViewById(R.id.main_radiogroup);
-//        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-//
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId)
-//            {
-//                switch (checkedId) {
-//                    case R.id.workspace:
-//                        tabHost.setCurrentTab(0);
-//                        break;
-//                    case R.id.entertainment:
-//                        tabHost.setCurrentTab(1);
-//                        break;
-//                    case R.id.tools:
-//                        tabHost.setCurrentTab(2);
-//                        break;
-//                    case R.id.setting:
-//                        tabHost.setCurrentTab(3);
-//                        break;
-//
-//                }
-//            }
-//        });
-//    }
-private TabHost tabHost;
+    private TabHost tabHost;
 
     private static final String DASH_TAB="dashboard";
     // CONX - contacts
