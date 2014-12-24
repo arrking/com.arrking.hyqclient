@@ -10,5 +10,12 @@
         <item name="android:background">@drawable/tabhost_bg_selector</item>
         <item name="android:textColor">#a8aeb5</item>
         <item name="android:button">@null</item>
-    </style>  
+    </style>
+    <style name="gallery_cat_relativelayout">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/gallery_bg</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>
