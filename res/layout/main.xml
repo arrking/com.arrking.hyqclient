@@ -25,24 +25,24 @@
 	    android:background="@drawable/bar" >
 	    <RadioButton
 	        android:id="@+id/rb_home"
-	        android:drawableTop="@drawable/home_icon"
+	        android:drawableTop="@drawable/info_icon"
 	        style="@style/rg_style"
-	        android:text="主页" />
+	        android:text="" />
 	    <RadioButton
 	        android:id="@+id/rb_at"
-	        android:drawableTop="@drawable/at_icon"
+	        android:drawableTop="@drawable/store_icon"
 	        style="@style/rg_style"
-	        android:text="通讯录" />
+	        android:text="" />
 	    <RadioButton
 	        android:id="@+id/rb_mess"
-	        android:drawableTop="@drawable/msg_icon"      
+	        android:drawableTop="@drawable/trade_icon"
 	        style="@style/rg_style"
-	        android:text="招聘" />
+	        android:text="" />
 	    <RadioButton
 	        android:id="@+id/rb_more"      
-	        android:drawableTop="@drawable/more_icon"
+	        android:drawableTop="@drawable/member_icon"
 	        style="@style/rg_style"
-	        android:text="我" />
+	        android:text="" />
 	</RadioGroup>
 </TabHost>
 
