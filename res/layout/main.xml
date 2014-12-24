@@ -24,22 +24,22 @@
 	    android:orientation="horizontal"
 	    android:background="@drawable/bar" >
 	    <RadioButton
-	        android:id="@+id/rb_home"
+	        android:id="@+id/rb_dash"
 	        android:drawableTop="@drawable/info_icon"
 	        style="@style/rg_style"
 	        android:text="" />
 	    <RadioButton
-	        android:id="@+id/rb_at"
+	        android:id="@+id/rb_contacts"
 	        android:drawableTop="@drawable/store_icon"
 	        style="@style/rg_style"
 	        android:text="" />
 	    <RadioButton
-	        android:id="@+id/rb_mess"
+	        android:id="@+id/rb_jobs"
 	        android:drawableTop="@drawable/trade_icon"
 	        style="@style/rg_style"
 	        android:text="" />
 	    <RadioButton
-	        android:id="@+id/rb_more"      
+	        android:id="@+id/rb_profile"
 	        android:drawableTop="@drawable/member_icon"
 	        style="@style/rg_style"
 	        android:text="" />

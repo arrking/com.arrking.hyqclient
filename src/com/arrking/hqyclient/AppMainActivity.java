@@ -95,7 +95,7 @@ private TabHost tabHost;
         tabHost.setCurrentTabByTag(DASH_TAB);
 
         RadioGroup radioGroup =  (RadioGroup) this.findViewById(R.id.main_radio);
-        final RadioButton rb=(RadioButton)this.findViewById(R.id.rb_home);
+        final RadioButton rb=(RadioButton)this.findViewById(R.id.rb_dash);
         rb.setBackgroundResource(R.drawable.tabhost_press);
 
         radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener()
@@ -105,19 +105,19 @@ private TabHost tabHost;
                 rb.setBackgroundResource(R.drawable.tabhost_bg_selector);
                 switch (checkedId)
                 {
-                    case R.id.rb_home:
+                    case R.id.rb_dash:
                         tabHost.setCurrentTabByTag(DASH_TAB);
                         break;
 
-                    case R.id.rb_at:
+                    case R.id.rb_contacts:
                         tabHost.setCurrentTabByTag(CONX_TAB);
                         break;
 
-                    case R.id.rb_mess:
+                    case R.id.rb_jobs:
                         tabHost.setCurrentTabByTag(JOBS_TAB);
                         break;
 
-                    case R.id.rb_more:
+                    case R.id.rb_profile:
                         tabHost.setCurrentTabByTag(PROFILE_TAB);
                         break;
 
