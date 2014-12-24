@@ -8,7 +8,10 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import com.arrking.hqyclient.ui.contacts.ContxIndexActivity;
 import com.arrking.hqyclient.ui.dashboard.DashIndexActivity;
+import com.arrking.hqyclient.ui.jobs.JobsIndexActivity;
+import com.arrking.hqyclient.ui.profile.ProfileIndexActivity;
 
 @SuppressWarnings("deprecation")
 public class AppMainActivity extends TabActivity
@@ -68,27 +71,28 @@ public class AppMainActivity extends TabActivity
 //    }
 private TabHost tabHost;
 
-    private static final String HOME_TAB="home";
-    private static final String AT_TAB="at";
-    private static final String MSG_TAB="msg";
-    private static final String MORE_TAB="more";
+    private static final String DASH_TAB="dashboard";
+    // CONX - contacts
+    private static final String CONX_TAB="contacts";
+    private static final String JOBS_TAB="jobs";
+    private static final String PROFILE_TAB="profile";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
         tabHost = this.getTabHost();
-        TabSpec homeSpec=tabHost.newTabSpec(HOME_TAB).setIndicator(HOME_TAB).setContent(new Intent(this, DashIndexActivity.class));
-        TabSpec atSpec=tabHost.newTabSpec(AT_TAB).setIndicator(AT_TAB).setContent(new Intent(this,DashIndexActivity.class));
-        TabSpec msgSpec=tabHost.newTabSpec(MSG_TAB).setIndicator(MSG_TAB).setContent(new Intent(this,DashIndexActivity.class));
-        TabSpec moreSpec=tabHost.newTabSpec(MORE_TAB).setIndicator(MORE_TAB).setContent(new Intent(this,DashIndexActivity.class));
+        TabSpec dashSpec=tabHost.newTabSpec(DASH_TAB).setIndicator(DASH_TAB).setContent(new Intent(this, DashIndexActivity.class));
+        TabSpec conxSpec=tabHost.newTabSpec(CONX_TAB).setIndicator(CONX_TAB).setContent(new Intent(this, ContxIndexActivity.class));
+        TabSpec jobsSpec=tabHost.newTabSpec(JOBS_TAB).setIndicator(JOBS_TAB).setContent(new Intent(this, JobsIndexActivity.class));
+        TabSpec profileSpec=tabHost.newTabSpec(PROFILE_TAB).setIndicator(PROFILE_TAB).setContent(new Intent(this,ProfileIndexActivity.class));
 
-        tabHost.addTab(homeSpec);
-        tabHost.addTab(atSpec);
-        tabHost.addTab(msgSpec);
-        tabHost.addTab(moreSpec);
+        tabHost.addTab(dashSpec);
+        tabHost.addTab(conxSpec);
+        tabHost.addTab(jobsSpec);
+        tabHost.addTab(profileSpec);
 
-        tabHost.setCurrentTabByTag(HOME_TAB);
+        tabHost.setCurrentTabByTag(DASH_TAB);
 
         RadioGroup radioGroup =  (RadioGroup) this.findViewById(R.id.main_radio);
         final RadioButton rb=(RadioButton)this.findViewById(R.id.rb_home);
@@ -102,19 +106,19 @@ private TabHost tabHost;
                 switch (checkedId)
                 {
                     case R.id.rb_home:
-                        tabHost.setCurrentTabByTag(HOME_TAB);
+                        tabHost.setCurrentTabByTag(DASH_TAB);
                         break;
 
                     case R.id.rb_at:
-                        tabHost.setCurrentTabByTag(AT_TAB);
+                        tabHost.setCurrentTabByTag(CONX_TAB);
                         break;
 
                     case R.id.rb_mess:
-                        tabHost.setCurrentTabByTag(MSG_TAB);
+                        tabHost.setCurrentTabByTag(JOBS_TAB);
                         break;
 
                     case R.id.rb_more:
-                        tabHost.setCurrentTabByTag(MORE_TAB);
+                        tabHost.setCurrentTabByTag(PROFILE_TAB);
                         break;
 
                     default:
@@ -122,7 +126,6 @@ private TabHost tabHost;
                 }
             }
         });
-
     }
 
 
