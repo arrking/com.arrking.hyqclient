@@ -162,8 +162,8 @@
 <color name="service_list_item_title">#ff99ccff</color>
 <color name="service_list_item_desc">#ff336699</color>
 <color name="hot_bg">#ffeeeeee</color>
-<color name="info_list_item_desc">#ff808080</color>
-<color name="info_list_item_title">#ff080808</color>
+<color name="dash_list_item_desc">#ff808080</color>
+<color name="dash_list_item_title">#ff080808</color>
 <color name="info_list_item_has_read_title">#ffbbbbbb</color>
 <color name="info_list_item_has_read_desc">#ffbbbbbb</color>
 <color name="info_title">#ff000000</color>

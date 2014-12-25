@@ -11,16 +11,12 @@
         <item name="android:textColor">#a8aeb5</item>
         <item name="android:button">@null</item>
     </style>
-    <style name="gallery_cat_relativelayout">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:background">@drawable/gallery_bg</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="dash_list_item_title">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/dash_list_item_title</item>
     </style>
-    <style name="info_list">
-        <item name="android:background">@color/hot_bg</item>
-        <item name="android:fadingEdge">none</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+    <style name="dash_list_item_desc">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">@color/dash_list_item_desc</item>
     </style>
 </resources>
