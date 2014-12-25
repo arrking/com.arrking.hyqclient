@@ -43,9 +43,9 @@
                 custom:unselected_height="6dp"
                 android:layout_marginBottom="20dp"
                 />
-        <!--<RelativeLayout android:id="@id/infocat_list_relativeLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">-->
+        <RelativeLayout android:id="@+id/dash_list_items" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/slider">
             <!--<com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/infocat_listview" style="@style/info_list" />-->
-        <!--</RelativeLayout>-->
+        </RelativeLayout>
 
     </RelativeLayout>
 
