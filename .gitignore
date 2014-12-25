@@ -1,3 +1,12 @@
+# Android Studio
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+
+
 #built application files
 *.apk
 *.ap_
@@ -25,25 +34,11 @@ Thumbs.db
 .classpath
 .project
 
-# Android Studio
-.idea
-#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
-.gradle
-build/
 
-# cordova and ionic
-node_modules
-hyqclient.sublime-workspace
-www
-.tmp
-.sass-cache
-app/lib
-coverage
-platforms
-plugins
+/*/out
+/*/*/build
+/*/*/production
+*.iws
+*.ipr
+*~
 *.swp
-*.swo
-*.log
-*.DS_Store
-
-app/scripts/config.js
