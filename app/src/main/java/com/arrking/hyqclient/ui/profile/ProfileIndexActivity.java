@@ -9,23 +9,32 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.arrking.hyqclient.util.Constants;
+import com.arrking.hyqclient.util.ImageUtil;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 import com.arrking.hyqclient.R;
+import com.arrking.hyqclient.component.RoundedImageView;
 import com.arrking.hyqclient.util.KeyboardUtils;
 
 /**
  * Created by hain on 23/12/2014.
  */
-public class ProfileIndexActivity extends Activity implements View.OnClickListener{
+public class ProfileIndexActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = new String("JobsIndexActivity");
+    private ImageUtil imageUtil;
+
     // top bar title text
     private TextView tb_title;
 
-    // texts
+    // profile data
     private TextView prf_email;
     private EditText prf_name;
     private EditText prf_phone;
     private EditText prf_status;
+    private RoundedImageView avatarImageView;
+
 
     // layouts for clickable event
     private RelativeLayout changeFullNameRelativeLayout;
@@ -36,8 +45,24 @@ public class ProfileIndexActivity extends Activity implements View.OnClickListen
         super.onCreate(paramBundle);
         Log.d(TAG, "get run .... ");
         setContentView(R.layout.profile);
+        imageUtil = new ImageUtil(this);
+
         tb_title = (TextView) findViewById(R.id.txt_wb_title);
         tb_title.setText("我的页面");
+
+        initUI();
+        // support change buttons
+        initListeners();
+        loadUserData();
+    }
+
+    private void loadUserData() {
+        loadAvatar();
+    }
+
+    private void initUI() {
+        // avatar image
+        this.avatarImageView = (RoundedImageView) findViewById(R.id.avatar_imageview);
 
         // set profile texts
         this.prf_email = (TextView) findViewById(R.id.email_textview);
@@ -55,9 +80,6 @@ public class ProfileIndexActivity extends Activity implements View.OnClickListen
         this.prf_email.setEnabled(false);
         this.prf_phone.setEnabled(false);
         this.prf_status.setEnabled(false);
-
-        // support change buttons
-        initListeners();
     }
 
     private void initListeners() {
@@ -72,15 +94,15 @@ public class ProfileIndexActivity extends Activity implements View.OnClickListen
         changeStatusRelativeLayout.setOnClickListener(this);
     }
 
-    private void changeNameOnClick(){
+    private void changeNameOnClick() {
         initChangingEditText(this.prf_name);
     }
 
-    private void changePhoneOnClick(){
+    private void changePhoneOnClick() {
         initChangingEditText(this.prf_phone);
     }
 
-    private void changeStatusOnClick(){
+    private void changeStatusOnClick() {
         initChangingEditText(this.prf_status);
     }
 
@@ -93,6 +115,11 @@ public class ProfileIndexActivity extends Activity implements View.OnClickListen
     private void stopChangingEditText(EditText editText) {
         editText.setEnabled(false);
         KeyboardUtils.hideKeyboard(this);
+    }
+
+    private void loadAvatar() {
+        ImageLoader.getInstance().displayImage("http://pic.jschina.com.cn/0/12/19/62/12196279_843728.jpg",
+                avatarImageView, Constants.UIL_USER_AVATAR_DISPLAY_OPTIONS);
     }
 
     @Override
