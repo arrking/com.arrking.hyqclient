@@ -45,7 +45,7 @@ public class QuickAlphabeticBar extends ImageButton {
 
     public boolean onTouchEvent(MotionEvent paramMotionEvent) {
         int i = paramMotionEvent.getAction();
-
+        // TODO Fix this scroll list
         // get the current letter
         int j = (int) (paramMotionEvent.getY() / (this.mHight / 27.0F));
         if ((j < 27) && (j >= 0)) {
