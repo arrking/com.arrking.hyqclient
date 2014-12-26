@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
 
-	<include android:id="@+id/layout_title_bar" layout="@layout/tilte_bar"/>    
+    <RelativeLayout
+        android:id="@id/maillist_topbar"
+        style="@style/top_bar_layout">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bar"
+            android:gravity="center"
+            android:text="@string/maillist"
+            android:textColor="@color/top_bar_text"
+            android:textSize="@dimen/head_title_size" />
+
+        <TextView
+            android:id="@id/cat_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/cat_icon"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maillist_topbar"
+        android:background="@drawable/maillist_search"
+        android:hint="@string/search"
+        android:paddingLeft="36.0dip"
+        android:paddingRight="25.0dip"
+        android:textSize="14.0sp" />
+
+    <ListView
+        android:id="@id/maillist_layout_main_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/edit"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <com.arrking.hyqclient.ui.contacts.QuickAlphabeticBar
+        android:id="@id/fast_scroller_view"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/edit"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/dic_background" />
+
+    <TextView
+        android:id="@id/fast_position"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sort_icon_bg_click"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="48.0dip"
+        android:visibility="invisible" />
+</RelativeLayout>

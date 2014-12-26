@@ -25,6 +25,10 @@
     <string name="prf_status_message">状态</string>
     <string name="prf_done">完成</string>
 
+    // contacts
+    <string name="search">搜索</string>
+    <string name="maillist">通讯录</string>
+
 
 
 

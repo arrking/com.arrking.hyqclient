@@ -20,7 +20,5 @@ public class ContxIndexActivity extends Activity {
         super.onCreate(paramBundle);
         Log.d(TAG, "get run .... ");
         setContentView(R.layout.contacts);
-        tb_title=(TextView)findViewById(R.id.txt_wb_title);
-        tb_title.setText("通讯录");
     }
 }
