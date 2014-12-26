@@ -7,10 +7,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.arrking.hyqclient.R;
+import com.arrking.hyqclient.component.LoadingUI;
 
 /**
  * Created by hain on 23/12/2014.
@@ -23,6 +25,8 @@ public class ContxIndexActivity extends Activity implements  AdapterView.OnItemC
     private ListView peopleListView;
     private QuickAlphabeticBar alpha;
     private EditText searchBoxEditText;
+    private LoadingUI loadingUI;
+    private FrameLayout rootView;
 
 
     View.OnTouchListener touchListener = new View.OnTouchListener()
@@ -59,11 +63,20 @@ public class ContxIndexActivity extends Activity implements  AdapterView.OnItemC
     }
 
     private void loadAndDisplayContacts() {
-        
+        addLoading();
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // do open contact card
+    }
+
+    private void addLoading()
+    {
+        this.rootView = ((FrameLayout)getWindow().getDecorView());
+        this.loadingUI = new LoadingUI(this, getResources().getString(R.string.loading_tip));
+        FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(-2, -2, 17);
+        this.loadingUI.setLayoutParams(localLayoutParams);
+        this.rootView.addView(this.loadingUI);
     }
 }
