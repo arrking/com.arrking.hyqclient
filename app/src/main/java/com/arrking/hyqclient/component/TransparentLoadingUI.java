@@ -1,11 +1,9 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -52,6 +50,6 @@ public class TransparentLoadingUI extends LinearLayout
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.TransparentLoadingUI
+ * Qualified Name:     com.arrking.hyqclient.component.TransparentLoadingUI
  * JD-Core Version:    0.6.2
  */

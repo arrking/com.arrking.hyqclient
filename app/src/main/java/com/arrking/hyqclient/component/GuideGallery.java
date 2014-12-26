@@ -1,7 +1,6 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.util.AttributeSet;
@@ -83,6 +82,6 @@ public class GuideGallery extends Gallery
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.GuideGallery
+ * Qualified Name:     com.arrking.hyqclient.component.GuideGallery
  * JD-Core Version:    0.6.2
  */

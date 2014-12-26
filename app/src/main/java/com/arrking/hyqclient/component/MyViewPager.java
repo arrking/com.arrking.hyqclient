@@ -1,11 +1,10 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.ViewParent;
 
 public class MyViewPager extends ViewPager
 {
@@ -57,6 +56,6 @@ public class MyViewPager extends ViewPager
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.MyViewPager
+ * Qualified Name:     com.arrking.hyqclient.component.MyViewPager
  * JD-Core Version:    0.6.2
  */

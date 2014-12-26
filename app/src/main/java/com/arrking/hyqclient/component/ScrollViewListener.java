@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.widget.ScrollView;
 
@@ -8,6 +8,6 @@ public abstract interface ScrollViewListener
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.ScrollViewListener
+ * Qualified Name:     com.arrking.hyqclient.component.ScrollViewListener
  * JD-Core Version:    0.6.2
  */

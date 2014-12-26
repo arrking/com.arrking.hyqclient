@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -29,6 +29,6 @@ public class MyGallery extends Gallery
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.MyGallery
+ * Qualified Name:     com.arrking.hyqclient.component.MyGallery
  * JD-Core Version:    0.6.2
  */

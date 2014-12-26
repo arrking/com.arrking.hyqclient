@@ -1,8 +1,7 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
@@ -67,6 +66,6 @@ public class HackyViewPager extends ViewPager
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.HackyViewPager
+ * Qualified Name:     com.arrking.hyqclient.component.HackyViewPager
  * JD-Core Version:    0.6.2
  */

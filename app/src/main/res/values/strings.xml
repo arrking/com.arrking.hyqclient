@@ -15,4 +15,17 @@
     <string name="loading_tip">云端同步中...</string>
     <string name="pull_to_refresh_last_time_format">MM月dd日 HH:mm</string>
 
+    // profile
+    <string name="sup_choose_user_picture">选择照片作为头像</string>
+    <string name="prf_email">邮箱</string>
+    <string name="prf_full_name">名字</string>
+    <string name="prf_change">更改</string>
+    <string name="prf_title">我的资料</string>
+    <string name="prf_phone">电话</string>
+    <string name="prf_status_message">状态</string>
+    <string name="prf_done">完成</string>
+
+
+
+
 </resources>

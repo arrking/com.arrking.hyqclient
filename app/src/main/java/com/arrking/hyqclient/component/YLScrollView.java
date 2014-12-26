@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -45,6 +45,6 @@ public class YLScrollView extends ScrollView
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.YLScrollView
+ * Qualified Name:     com.arrking.hyqclient.component.YLScrollView
  * JD-Core Version:    0.6.2
  */

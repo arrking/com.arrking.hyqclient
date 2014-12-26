@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.util.Log;

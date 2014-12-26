@@ -1,7 +1,6 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 
 public abstract interface PageIndicator extends ViewPager.OnPageChangeListener
 {
@@ -17,6 +16,6 @@ public abstract interface PageIndicator extends ViewPager.OnPageChangeListener
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.PageIndicator
+ * Qualified Name:     com.arrking.hyqclient.component.PageIndicator
  * JD-Core Version:    0.6.2
  */

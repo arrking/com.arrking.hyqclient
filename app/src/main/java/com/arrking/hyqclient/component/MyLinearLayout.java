@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -21,6 +21,6 @@ public class MyLinearLayout extends LinearLayout
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.MyLinearLayout
+ * Qualified Name:     com.arrking.hyqclient.component.MyLinearLayout
  * JD-Core Version:    0.6.2
  */

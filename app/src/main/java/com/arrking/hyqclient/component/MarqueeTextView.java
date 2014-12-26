@@ -1,4 +1,4 @@
-package com.arrking.android.component;
+package com.arrking.hyqclient.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -28,6 +28,6 @@ public class MarqueeTextView extends TextView
 }
 
 /* Location:           /Users/hain/git/bpo/foods-e-home/sample/classes/
- * Qualified Name:     com.arrking.android.component.MarqueeTextView
+ * Qualified Name:     com.arrking.hyqclient.component.MarqueeTextView
  * JD-Core Version:    0.6.2
  */
