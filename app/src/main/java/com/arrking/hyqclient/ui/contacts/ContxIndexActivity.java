@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 /**
@@ -97,11 +98,21 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
 
     private List<ContentValues> fakeListData() {
         List<ContentValues> tmp = new ArrayList();
+        // fake names -> pinyin data for fast postion
+        HashMap<String, String> names = new HashMap<String, String>();
+        names.put("李四", "li si");
+        names.put("李雷","li lei");
+        names.put("韩梅梅", "han mei mei");
+        names.put("露西", "lucy");
+        names.put("大卫", "david");
+        Random random    = new Random();
+        List<String> keys      = new ArrayList<String>(names.keySet());
         for (int i = 0; i < 10; i++) {
             ContentValues localContentValues = new ContentValues();
+            String  randomName = keys.get( random.nextInt(keys.size()) );
             localContentValues.put("id", i);
             localContentValues.put("userid", i);
-            localContentValues.put("username", "李四");
+            localContentValues.put("username", randomName);
             localContentValues.put("gender", 1);
             localContentValues.put("post", "总经理");
             localContentValues.put("company", "中关村软件园HelloWorldCafe");
@@ -119,7 +130,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
             localContentValues.put("imgpath", "http://pic.jschina.com.cn/0/12/19/62/12196279_843728.jpg");
             localContentValues.put("imgname", "foo");
             localContentValues.put("created", 1);
-            localContentValues.put("pinyin", "li si");
+            localContentValues.put("pinyin", names.get(randomName));
             tmp.add(localContentValues);
         }
         return tmp;
