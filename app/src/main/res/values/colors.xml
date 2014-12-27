@@ -191,7 +191,6 @@
     <color name="weibo_bind_title">#ff000000</color>
     <color name="weibo_list_item_devide">#ffcccccc</color>
     <color name="light_black">#ff333333</color>
-    <color name="not_data_tip">#ff999999</color>
     <color name="list_item_select">#ffcccccc</color>
     <color name="share_to_weibo_bg">#ffeeeeee</color>
     <color name="reply_list_gray">#ffdddddd</color>
@@ -273,5 +272,6 @@
     <color name="action_button_text">#666666</color>
     <color name="action_selector_pressed">#1a000000</color>
     <color name="action_selector_focused">#77000000</color>
+    <color name="not_data_tip">#ff999999</color>
 
 </resources>

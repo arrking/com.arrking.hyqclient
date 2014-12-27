@@ -28,6 +28,7 @@
     // contacts
     <string name="search">搜索</string>
     <string name="maillist">通讯录</string>
+    <string name="no_content_now">暂时还没有数据哦</string>
 
 
 
