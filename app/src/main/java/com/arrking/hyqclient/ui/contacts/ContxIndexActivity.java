@@ -108,7 +108,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
         Random random    = new Random();
         List<String> keys      = new ArrayList<String>(names.keySet());
         List<String> randomNames = new ArrayList<String>();
-        for(int i = 0 ; i <10 ; i ++){
+        for(int i = 0 ; i <20 ; i ++){
             String  randomName = keys.get( random.nextInt(keys.size()) );
             randomNames.add(randomName);
         }
@@ -119,7 +119,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
 
             localContentValues.put("id", j);
             localContentValues.put("userid", j);
-            localContentValues.put("username", randomNames.get(j));
+            localContentValues.put("username", randomNames.get(j) + Integer.toString(j));
             localContentValues.put("gender", 1);
             localContentValues.put("post", "总经理");
             localContentValues.put("company", "中关村软件园HelloWorldCafe");
@@ -229,7 +229,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            Log.d(TAG, "ContactsListAdapter getView @" + Integer.toString(position));
+            Log.d(TAG, "================== \n ContactsListAdapter getView @" + Integer.toString(position));
             ContxIndexActivity.ContactViewHolder localViewHolder;
 
             if(convertView == null){
@@ -255,11 +255,31 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
                 Log.d(TAG, "localViewHolder city == null ");
             }
             localViewHolder.city.setText(localContentValues.getAsString("city"));
-            localViewHolder.alpha.setText(ContxIndexActivity.this.getAlpha(localContentValues.getAsString("pinyin")));
+            String alphaValue = new String(ContxIndexActivity.this.getAlpha(localContentValues.getAsString("pinyin")));
+            localViewHolder.alpha.setText(alphaValue);
             localViewHolder.company.setText(localContentValues.getAsString("company"));
             localViewHolder.headImage.setImageResource(R.drawable.demo_dummy_leifeng);
             localViewHolder.name.setText(localContentValues.getAsString("username"));
             localViewHolder.post.setText(localContentValues.getAsString("post"));
+
+            // whether show the Alpha or not
+            if(position > 0){
+                String lastAlpha = ContxIndexActivity.this.getAlpha(((ContentValues) (this.list.get(position -1))).getAsString("pinyin"));
+                Log.d(TAG, "lastAlpha " + lastAlpha);
+                Log.d(TAG, "this alpha " + alphaValue);
+                if(!lastAlpha.equals(alphaValue)){
+                    Log.d(TAG, "this setVisibility View.VISIBLE");
+                    localViewHolder.alpha.setVisibility(View.VISIBLE);
+                }else{
+                    Log.d(TAG, "this setVisibility View.GONE");
+                    localViewHolder.alpha.setVisibility(View.GONE);
+                }
+            }else{
+                // this is the first item in list, show the alpha obviously
+                Log.d(TAG, "this setVisibility View.VISIBLE");
+                localViewHolder.alpha.setVisibility(View.VISIBLE);
+            }
+
 
             return convertView;
         }
