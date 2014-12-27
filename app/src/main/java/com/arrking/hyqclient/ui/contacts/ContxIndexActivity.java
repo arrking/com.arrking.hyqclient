@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,10 +15,13 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.arrking.hyqclient.R;
 import com.arrking.hyqclient.component.LoadingUI;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -97,24 +101,25 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
             ContentValues localContentValues = new ContentValues();
             localContentValues.put("id", i);
             localContentValues.put("userid", i);
-            localContentValues.put("username", "foo bar");
+            localContentValues.put("username", "李四");
             localContentValues.put("gender", 1);
-            localContentValues.put("post", 10000);
-            localContentValues.put("companyname", "ARR");
+            localContentValues.put("post", "总经理");
+            localContentValues.put("company", "中关村软件园HelloWorldCafe");
             localContentValues.put("tel", "010-5888888");
             localContentValues.put("mobile", "15888888888");
             localContentValues.put("catid", 1);
-            localContentValues.put("catname", "sooo");
-            localContentValues.put("province", "hoooo");
-            localContentValues.put("city", "BJ");
-            localContentValues.put("district", "HD");
+            localContentValues.put("catname", "management");
+            localContentValues.put("province", "hei long jiang");
+            localContentValues.put("city", "北京");
+            localContentValues.put("district", "海淀");
             localContentValues.put("fax", "010-59999999");
             localContentValues.put("addr", "Xi Er Qi");
+            // image should 85 * 85 pixels and 72 pixels/inch
             localContentValues.put("imgurl", "http://pic.jschina.com.cn/0/12/19/62/12196279_843728.jpg");
             localContentValues.put("imgpath", "http://pic.jschina.com.cn/0/12/19/62/12196279_843728.jpg");
             localContentValues.put("imgname", "foo");
             localContentValues.put("created", 1);
-            localContentValues.put("pinyin", "foo bar");
+            localContentValues.put("pinyin", "li si");
             tmp.add(localContentValues);
         }
         return tmp;
@@ -191,7 +196,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
 
         @Override
         public int getCount() {
-            return 0;
+            return this.list.size();
         }
 
         @Override
@@ -206,8 +211,50 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
+            Log.d(TAG, "ContactsListAdapter getView @" + Integer.toString(position));
+            ContxIndexActivity.ContactViewHolder localViewHolder;
+
+            if(convertView == null){
+                Log.d(TAG, "ContactsListAdapter convertView == null");
+                convertView = this.inflater.inflate(R.layout.contacts_list_item, null);
+                localViewHolder = new ContactViewHolder();
+                localViewHolder.alpha = (TextView) convertView.findViewById(R.id.alpha);
+                localViewHolder.name = (TextView) convertView.findViewById(R.id.user_name);
+                localViewHolder.city = (TextView) convertView.findViewById(R.id.user_city);
+                localViewHolder.company = (TextView) convertView.findViewById(R.id.user_company);
+                localViewHolder.post = (TextView) convertView.findViewById(R.id.user_post);
+                localViewHolder.headImage = (ImageView) convertView.findViewById(R.id.head_icon);
+                convertView.setTag(localViewHolder);
+            }else{
+                Log.d(TAG, "ContactsListAdapter convertView != null");
+                localViewHolder = (ContactViewHolder)convertView.getTag();
+            }
+
+            ContentValues localContentValues = (ContentValues) this.list.get(position);
+            Log.d(TAG, "ContactsListAdapter localContentValues:" + localContentValues.toString());
+            Log.d(TAG, "localContentValues city:" + localContentValues.getAsString("city") );
+            if(localViewHolder.city == null){
+                Log.d(TAG, "localViewHolder city == null ");
+            }
+            localViewHolder.city.setText(localContentValues.getAsString("city"));
+            localViewHolder.alpha.setText(ContxIndexActivity.this.getAlpha(localContentValues.getAsString("pinyin")));
+            localViewHolder.company.setText(localContentValues.getAsString("company"));
+            localViewHolder.headImage.setImageResource(R.drawable.demo_dummy_leifeng);
+            localViewHolder.name.setText(localContentValues.getAsString("username"));
+            localViewHolder.post.setText(localContentValues.getAsString("post"));
+
+            return convertView;
         }
+    }
+
+    private static class ContactViewHolder
+    {
+        TextView alpha;
+        TextView city;
+        TextView company;
+        ImageView headImage;
+        TextView name;
+        TextView post;
     }
 
 }
