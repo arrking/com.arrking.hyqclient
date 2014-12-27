@@ -107,12 +107,19 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
         names.put("大卫", "david");
         Random random    = new Random();
         List<String> keys      = new ArrayList<String>(names.keySet());
-        for (int i = 0; i < 10; i++) {
-            ContentValues localContentValues = new ContentValues();
+        List<String> randomNames = new ArrayList<String>();
+        for(int i = 0 ; i <10 ; i ++){
             String  randomName = keys.get( random.nextInt(keys.size()) );
-            localContentValues.put("id", i);
-            localContentValues.put("userid", i);
-            localContentValues.put("username", randomName);
+            randomNames.add(randomName);
+        }
+        Collections.sort(randomNames);
+
+        for (int j = 0; j < randomNames.size(); j++) {
+            ContentValues localContentValues = new ContentValues();
+
+            localContentValues.put("id", j);
+            localContentValues.put("userid", j);
+            localContentValues.put("username", randomNames.get(j));
             localContentValues.put("gender", 1);
             localContentValues.put("post", "总经理");
             localContentValues.put("company", "中关村软件园HelloWorldCafe");
@@ -130,7 +137,7 @@ public class ContxIndexActivity extends Activity implements AdapterView.OnItemCl
             localContentValues.put("imgpath", "http://pic.jschina.com.cn/0/12/19/62/12196279_843728.jpg");
             localContentValues.put("imgname", "foo");
             localContentValues.put("created", 1);
-            localContentValues.put("pinyin", names.get(randomName));
+            localContentValues.put("pinyin", names.get(randomNames.get(j)));
             tmp.add(localContentValues);
         }
         return tmp;
