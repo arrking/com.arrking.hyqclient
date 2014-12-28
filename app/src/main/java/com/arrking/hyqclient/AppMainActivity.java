@@ -44,6 +44,8 @@ public class AppMainActivity extends TabActivity {
         final RadioButton rb = (RadioButton) this.findViewById(R.id.rb_dash);
         rb.setBackgroundResource(R.drawable.tabhost_selected);
 
+        radioGroup.getMeasuredHeight();
+
         radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb.setBackgroundResource(R.drawable.tabhost_bg_selector);

@@ -24,4 +24,6 @@ public class Constants {
             .showImageOnLoading(R.drawable.placeholder_group).showImageForEmptyUri(R.drawable.placeholder_group)
             .showImageOnFail(R.drawable.placeholder_group).cacheOnDisc(true).cacheInMemory(true).build();
 
+    public static int TOPBARHIGHT;
+
 }
