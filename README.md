@@ -47,3 +47,8 @@ List Devices
 ```
 adb devices
 ```
+
+
+# License
+Copyright (c) 2015 Hain Wang
+Licensed under the MIT license.
